@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 95vh;
+  max-height: 95vh;
+  background: rgba(0, 0, 0, 0.384);
+
+  &::after {
+    background: url(./images/poster.jpg) top center/cover no-repeat;
+    content: "";
+    position: absolute;
+    height: 95vh;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0;
+  width: 100%;
+
+  .nav-menu {
+    display: none;
+    button {
+      border: none;
+      background-color: transparent;
+      color: white;
+      font-size: 30px;
+    }
+  }
+
+  h1 {
+    font-size: 40px;
+    color: rgb(253, 255, 254);
+    font-family: "Hind Siliguri", sans-serif;
+  }
+}
+
+.links {
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+  align-items: center;
+  transition: 0.5s ease;
+}
+
+.register {
+  width: 400px;
+  padding-left: 5rem;
+  padding-bottom: 1rem;
+  button {
+    border: none;
+    background: rgb(63, 63, 77);
+    border-radius: 20px;
+    padding: 0.4rem;
+    color: white;
+    font-size: 22px;
+    margin-right: 1rem;
+
+    &:hover {
+      background-color: rgba(63, 63, 77, 0.849);
+    }
+  }
+}
+
+ul {
+  display: flex;
+  width: 60%;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  font-size: 20px;
+  // position: relative;
+
+  a {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      color: aliceblue;
+    }
+  }
+}
+
+.buttons {
+  position: relative;
+  top: 35%;
+  margin-left: 4.5rem;
+
+  button {
+    padding: 0.5rem;
+    // height: 3.3rem;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 25px;
+    background-color: rgba(138, 138, 138, 0.541);
+    backdrop-filter: blur(10px);
+    border: none;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    color: rgb(17, 16, 16);
+    .fa-solid {
+      font-size: 25px;
+      padding-left: 5px;
+    }
+  }
+  #info {
+    background-color: rgba(124, 125, 126, 0.63);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: rgba(106, 108, 109, 0.541);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+.section-1 {
+  width: 100%;
+  height: 50vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.form-modal {
+  background-color: rgba(34, 32, 32, 0.658);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+
+  .register-form {
+    width: 37rem;
+    max-width: 100%;
+    height: 80vh;
+    background: rgba(255, 255, 255, 0.911);
+    backdrop-filter: blur(10px);
+    position: relative;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+
+    .form {
+      width: 60% !important;
+    }
+
+    label {
+      color: rgb(5, 5, 5);
+    }
+
+    .row {
+      margin-top: 1rem;
+    }
+    .form-title {
+      color: rgb(10, 10, 10);
+      text-align: center;
+      margin: 0;
+    }
+    .b-day {
+      margin-top: 0;
+      input {
+        width: 70%;
+      }
+    }
+
+    input {
+      background-color: rgba(202, 199, 199, 0.548);
+      border-radius: 20px;
+    }
+
+    .register-close-btn {
+      position: absolute;
+      left: 93%;
+      top: 1%;
+      border-radius: 10px;
+      border: none;
+      color: rgb(10, 10, 10);
+      background: transparent;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .sign-btn {
+      padding: 0.5rem;
+      width: 50%;
+      border: none;
+      background-color: rgb(0, 42, 182);
+      color: white;
+      font-size: 17px;
+      border-radius: 20px;
+    }
+  }
+  .login-form {
+    width: 27rem;
+    max-width: 100%;
+    height: 65vh;
+    background: rgba(255, 255, 255, 0.829);
+    backdrop-filter: blur(10px);
+    position: relative;
+    padding: 3rem 0.5rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+
+    input {
+      border-radius: 20px;
+      width: 20rem;
+      background-color: rgba(202, 199, 199, 0.925);
+      padding: 0.7rem;
+      margin-bottom: 2rem;
+    }
+    .login-btn {
+      padding: 0.6rem 0rem;
+      width: 20rem;
+      margin-left: 0.9rem;
+      margin-top: 1rem;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      background-color: rgb(29, 106, 248);
+      color: white;
+      font-size: 20px;
+    }
+    .btn {
+      position: absolute;
+      left: 90%;
+      top: 2%;
+      border: none;
+      color: rgb(5, 5, 5);
+      background: transparent;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  }
+
+  .info-content {
+    background-color: rgba(19, 31, 41, 0.63);
+    width: 600px;
+    height: auto;
+    padding: 1rem;
+    color: white;
+    font-size: 17px;
+    position: relative;
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+
+    .btn {
+      color: white;
+      position: absolute;
+      right: 2%;
+      font-size: 30px;
+      top: 0%;
+    }
+
+    .title {
+      text-align: center;
+      padding-bottom: 1rem;
+      h3 {
+        font-size: 30px;
+        font-family: "Hind Siliguri", sans-serif;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+#info-content.notopen {
+  display: none;
+}
+
+#login-form.notopen {
+  display: none;
+}
+
+#register-form.notopen {
+  display: none;
+}
+
+.form-modal.open {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0400ms ease;
+}
