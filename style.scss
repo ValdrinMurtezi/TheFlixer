@@ -5,21 +5,23 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  box-sizing: border-box;
+  // box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
 
 .header {
-  width: 100%;
-  height: 92vh !important;
-  background: rgba(0, 0, 0, 0.384);
+  width: 100% !important;
+  height: 92vh;
+  background: rgba(0, 0, 0, 0.514);
+  position: relative;
+  box-sizing: border-box;
 
   &::after {
     background: url(./images/poster.jpg) top center/cover no-repeat;
     content: "";
     position: absolute;
     height: 95vh;
-    width: 100%;
+    width: 100% !important;
     top: 0;
     bottom: 0;
     right: 0;

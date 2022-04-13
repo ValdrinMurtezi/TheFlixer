@@ -1,20 +1,141 @@
-@media (max-width: 900px) {
-  .header {
-    height: 50vh !important;
-  }
-}
-
-@media (max-width: 740px) {
-  .header {
-    height: 75vh !important;
-  }
-}
-
-@media (max-width: 520px) {
-  .header {
-    height: 70vh !important;
-  }
+@media (max-width: 1200px) {
   nav {
-    padding: 1rem 1rem;
+    .register {
+      padding-left: 1rem;
+      width: 300px;
+    }
+    ul {
+      width: 65%;
+    }
+  }
+  .register-form {
+    height: auto !important;
+    padding: 1rem 1rem !important;
+    margin: 1rem;
+  }
+  .form-modal .login-form {
+    width: 23rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .header {
+    height: 42vh;
+    &::after {
+      height: 42vh;
+    }
+  }
+
+  nav {
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    width: 100%;
+    .links {
+      display: none;
+    }
+    .links.active {
+      display: flex;
+      flex-direction: column;
+      height: 45vh;
+      background-color: rgba(15, 17, 27, 0.767);
+      width: 100% !important;
+      padding: 0;
+      position: absolute;
+      inset: 0;
+      top: 0;
+      bottom: 0;
+      transition: 0.5s ease;
+      z-index: 1;
+      backdrop-filter: blur(15px);
+      transition: all 0.5s ease-in-out;
+      transition: transform 1s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+
+      ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0rem 0;
+        height: auto;
+
+        a {
+          padding: 2rem 0;
+        }
+      }
+      .register {
+        flex-direction: column;
+        position: absolute;
+        top: 2%;
+        left: 0;
+        button {
+          background-color: rgba(20, 6, 53, 0.404);
+          font-size: 19px;
+        }
+      }
+    }
+  }
+  .nav-menu {
+    display: inline !important;
+    padding-bottom: 1rem;
+    z-index: 2;
+  }
+  .form-modal {
+    z-index: 2;
+  }
+
+  .form-modal .login-form {
+    width: 23rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    height: 70vh;
+
+    &::after {
+      height: auto;
+    }
+  }
+
+  .links.active {
+    height: 70vh !important;
+
+    .register {
+      top: 3% !important;
+    }
+  }
+
+  .register-form {
+    height: auto !important;
+    padding: 0.5rem 1rem !important;
+    margin: 1rem;
+    bottom: 9rem;
+  }
+  .register-close-btn {
+    top: 0% !important;
+    left: 87% !important;
+  }
+
+  .form-modal .login-form {
+    height: 45vh;
+    bottom: 10rem;
+    padding: 4rem 0.5rem !important;
+  }
+
+  .buttons {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    button {
+      width: 10rem;
+    }
+  }
+
+  .form-modal .info-content {
+    width: 368px;
+    font-size: 15px;
+    bottom: 5rem;
+
+    h3 {
+      font-size: 26px !important;
+    }
   }
 }
