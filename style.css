@@ -8,20 +8,18 @@ body {
 }
 
 .header {
-  width: 100% !important;
-  height: 92vh;
-  background: rgba(0, 0, 0, 0.514);
+  height: 95vh;
+  background: rgba(0, 0, 0, 0.582);
   position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  width: 100%;
 }
 
 .header::after {
   background: url(./images/poster.jpg) top center/cover no-repeat;
   content: "";
   position: absolute;
+  width: 100%;
   height: 95vh;
-  width: 100% !important;
   top: 0;
   bottom: 0;
   right: 0;
@@ -157,7 +155,8 @@ ul a:hover {
 
 .section-1 {
   width: 100%;
-  height: 50vh;
+  height: auto;
+  padding: 2rem 0;
   background-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -169,6 +168,25 @@ ul a:hover {
       -ms-flex-align: center;
           align-items: center;
   color: white;
+}
+
+.section-1 .movies {
+  width: 70%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(13rem, 2fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(13rem, 2fr));
+  gap: 1.5rem;
+}
+
+.section-1 .movies .movie {
+  width: 100%;
+  cursor: pointer;
+}
+
+.section-1 .movies img {
+  width: 95%;
+  height: 250px;
 }
 
 .form-modal {
